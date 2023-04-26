@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" type="image/ico" href="icon.ico">
+    <title>Selecciona un personaje</title>
+
+  </head>
+  <body>
+    <h1 class="text-primary">Selecciona un personaje:</h1>
+
+    <select class="form-select" id="categoria">
+      <option value="COD">Selecciona una personaje</option>
+      <option value="LeonKennedy">Leon Kennedy</option>
+      <option value="JillValentine">Jill Valentine</option>
+      <option value="ChrisRedfield">Chris Redfield</option>
+      <option value="AlbertWesker">Albert Wesker</option>
+      <option value="AdaWong">Ada Wong</option>
+      <option value="ClaireRedfield">Claire Redfield</option>
+    </select>
+
+    <select class="form-select" id="select-personajes" disabled>
+      <option value="AlexMason">Alex Mason</option>
+      <option value="DavidMason">David Mason</option>
+      <option value="Ghost">Ghost</option>
+      <option value="JhonPrice">Jhon Price</option>
+    </select>
+    <div id="contenedor-imagen"></div>
+    <script>
+      const personajes = {
+        LeonKennedy: {
+          nombre: ["LeonKennedyR1","LeonKennedyR2","LeonKennedyR3"],
+        },
+        LeonKennedyR1:{
+          imagen: ['Imagenes/LeonKennedy1.png'],
+          descripcion: 'Leon Scott Kennedy es un personaje ficticio de la serie de videojuegos de terror de Resident Evil del subgénero de Horror de supervivencia desarrollados por la empresa Capcom.'
+        },
+        LeonKennedyR2:{
+          imagen: ['Imagenes/LeonKennedy2.png'],
+          descripcion: 'Leon Scott Kennedy (レオン・スコット・ケネディ Reon Sukotto Kenedi?) es uno de los personajes principales de la saga Resident Evil; él es uno de los protagonistas de Resident Evil 2, protagonista principal de Resident Evil 4 y uno de los protagonistas en Resident Evil 6. Nació en el año 1977.'
+        },
+        LeonKennedyR3:{
+          imagen: ['Imagenes/LeonKennedy3.png'],
+          descripcion: 'Durante los acontecimientos de septiembre de 1998, Leon entonces, un policía novato, llega a Raccoon City en su primer día de trabajo enfrentando, sin saberlo, una experiencia de pesadilla al llegar a una ciudad completamente contaminada con un agente viral extremadamente letal que cambió su vida de maneras impensables. '
+        },
+        JillValentine: {
+          nombre: ["JillValentineR1","JillValentineR2","JillValentineR3"],
+        },
+        JillValentineR1:{
+          imagen: ['Imagenes/Jill1.png'],
+          descripcion: 'Jill Valentine es un personaje ficticio femenino de la serie de videojuegos Resident Evil, desarrollada por la empresa japonesa Capcom'
+        },
+        JillValentineR2:{
+          imagen: ['Imagenes/Jill2.png'],
+          descripcion: 'Es un personaje que se preocupa mucho por sus compañeros y siempre trata de ayudarlos en caso de que la necesiten. A la edad adulta se unió a un programa de las Fuerzas Especiales Delta del Ejército de los Estados Unidos de América donde entrenó y obtuvo muy buenas calificaciones en desactivación de bombas'
+        },
+        JillValentineR3:{
+          imagen: ['Imagenes/Jill3.png'],
+          descripcion: 'Jill, además de aparecer en muchas entregas de videojuegos, también ha aparecido en varios mangas, cómics, libros, películas, entre otras cosas, lo que la convierte en uno de los personajes clave de la saga e historia de esta misma; incluidos crossovers y cameos en Fortnite, Street Fighter, Marvel vs. Capcom y Dead by Daylight.'
+        },
+        ChrisRedfield: {
+          nombre: ["ChrisRedfieldR1","ChrisRedfieldR2","ChrisRedfieldR3"],
+        },
+        ChrisRedfieldR1:{
+          imagen: ['Imagenes/Chris1.png'],
+          descripcion: 'Chris Redfield es un personaje ficticio de la serie de videojuegos Resident Evil de género terror y supervivencia desarrollados por Capcom. Hermano de Claire Redfield, compañero de Jill Valentine, Barry Burton, Rebecca Chambers, Sheva Alomar, y rival de Albert Wesker.'
+        },
+        ChrisRedfieldR2:{
+          imagen: ['Imagenes/Chris2.png'],
+          descripcion: 'Chris Redfield (en japonés クリス・レッドフィールド, Kurisu Reddofīrudo) fue el primer personaje jugable de toda la saga apareciendo por primera vez en Resident Evil.'
+        },
+        ChrisRedfieldR3:{
+          imagen: ['Imagenes/Chris3.png'],
+          descripcion: 'Chris es considerado por muchos fans y por fuentes oficiales de Capcom como uno de los protagonistas más importantes de la franquicia.'
+        },
+        AlbertWesker: {
+          nombre: ["AlbertWeskerR1","AlbertWeskerR2","AlbertWeskerR3"],
+        },
+        AlbertWeskerR1:{
+          imagen: ['Imagenes/Albert1.png'],
+          descripcion: 'Albert Wesker es un personaje del videojuego de terror y supervivencia Resident Evil, desarrollados por Capcom, en los que participó como antagonista principal desde su primera entrega hasta Resident Evil 5. Fue un prominente enemigo en los videojuegos.'
+        },
+        AlbertWeskerR2:{
+          imagen: ['Imagenes/Albert2.png'],
+          descripcion: 'Según uno de los productores de Capcom, Jun Takeuchi, "Albert representa el lado oscuro de la humanidad; el lado primitivo. Todo el ego que optimiza lo contrarrestamos con Chris, quien es básicamente el polo opuesto. Es una lucha entre la oscuridad y la luz".'
+        },
+        AlbertWeskerR3:{
+          imagen: ['Imagenes/Albert3.png'],
+          descripcion: 'Wesker es considerado el antagonista por excelencia de la serie, su vestimenta negra en compañía de sus gafas imponen respeto. Se ha considerado presuntuoso desde joven, precavido, manipulador e ingenioso para evadir y solucionar sus problemas en diversas situaciones. Todo esto con el objetivo de crear una raza humana superior.'
+        },
+        AdaWong: {
+          nombre: ["AdaWongR1","AdaWongR2","AdaWongR3"],
+        },
+        AdaWongR1:{
+          imagen: ['Imagenes/Ada1.png'],
+          descripcion: 'Ada Wong es un personaje ficticio de la franquicia de terror Resident Evil de Capcom. Es una figura antiheroína misteriosa y ambigua, que trabaja para los villanos de la serie, pero también rescata constantemente al protagonista Leon S. Kennedy de situaciones espantosas'
+        },
+        AdaWongR2:{
+          imagen: ['Imagenes/Ada2.png'],
+          descripcion: 'La vida pasada de Ada Wong antes de 1998 es un completo misterio. Tanto su origen étnico como su nacionalidad actual son totalmente desconocidos, aunque debido a sus rasgos se la puede identificar como "asiática". Su único dato biográfico fiable es su año de nacimiento (1974). Incluso su nombre, Ada Wong, no se sabe si es real. En 1998, Ada era una espía corporativa trabajando para un competidor no identificado de la Corporación Umbrella, que tenía la intención de adquirir de parte de Umbrella todo tipo de armas bio-orgánicas y una muestra del virus-G desarrollado por William Birkin.'
+        },
+        AdaWongR3:{
+          imagen: ['Imagenes/Ada3.png'],
+          descripcion: 'Ada fue enviada, como una de las primeras misiones suyas de las que se tiene conocimiento, a los laboratorios Arklay como infiltrada para esconderse en la mansión Spencer. Durante su corta estadía en el lugar,'
+        },
+        ClaireRedfield: {
+          nombre: ["ClaireRedfieldR1","ClaireRedfieldR2","ClaireRedfieldR3"],
+        },
+        ClaireRedfieldR1:{
+          imagen: ['Imagenes/Claire1.png'],
+          descripcion: 'Claire Redfield es un personaje ficticio de la franquicia de terror Resident Evil de Capcom. Claire es la hermana menor de Chris Redfield, un oficial de policía especial estadounidense y protagonista'
+        },
+        ClaireRedfieldR2:{
+          imagen: ['Imagenes/Claire2.png'],
+          descripcion: 'Claire Redfield es miembro actual de la organización de derechos humanos, TerraSave.'
+        },
+        ClaireRedfieldR3:{
+          imagen: ['Imagenes/Claire3.png'],
+          descripcion: 'Ella es la hermana menor del operativo de B.S.A.A. y ex-miembro de S.T.A.R.S., Chris Redfield. Claire es una sobreviviente del incidente de Raccoon City, que tuvo lugar en septiembre de 1998 después de que viajó a la ciudad en busca de su hermano Chris Redfield. Después de escapar de la ciudad con la ayuda de Leon S. Kennedy, Claire se aventuró a Europa para reanudar su búsqueda de Chris.'
+        }
+      };
+      const categoriaSelect = document.getElementById("categoria");
+      const selectPersonajes = document.getElementById('select-personajes');
+      const contenedorImagen = document.getElementById('contenedor-imagen');
+
+      categoriaSelect.addEventListener("change", () => {
+      selectPersonajes.innerHTML = "";
+      selectPersonajes.disabled = false;
+      const opciones = personajes[categoriaSelect.value].nombre;
+      for (const opcion of opciones) {
+        const option = document.createElement("option");
+        option.value = opcion;
+        option.textContent = opcion;
+        selectPersonajes.appendChild(option);
+      }
+    });
+
+      selectPersonajes.addEventListener('change', function() {
+        const nombrePersonaje = selectPersonajes.value;
+        const imagenSrc = personajes[nombrePersonaje].imagen;
+        const nombrePersonajeElement = document.createElement('h2');
+        nombrePersonajeElement.textContent = personajes[nombrePersonaje].value;
+        const imagenElement = document.createElement('img');
+        imagenElement.src = imagenSrc;
+        imagenElement.alt = `Imagen de ${personajes[nombrePersonaje].nombre}`;
+        imagenElement.style.width = '300px';
+        const descripcionPersonajeElement = document.createElement('p');
+        descripcionPersonajeElement.textContent = personajes[nombrePersonaje].descripcion;
+        contenedorImagen.innerHTML = '';
+        contenedorImagen.appendChild(nombrePersonajeElement);
+        contenedorImagen.appendChild(imagenElement);
+        //contenedorImagen.appendChild(descripcionFrutaElement);
+        imagenElement.addEventListener('click', function() {
+          window.location.href = `personajes.html?personaje=${nombrePersonaje}&imagen=${imagenSrc}&descripcion=${personajes[nombrePersonaje].descripcion}`;
+        });
+      });
+    </script>
+     <script src="/js/app.js"></script>
+     
+  </body>
+</html>

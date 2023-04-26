@@ -1,0 +1,53 @@
+{
+    "short_name": "RE",
+    "name":"Resident Evil",
+    "start_url":"index.html",
+    "background_color":"purple",
+    "display":"standalone",
+    "orientation": "portrait",
+    "theme_color":"purple",
+    "icons":[
+        {
+            "src":"Imagenes/icons/icon1.png",
+            "type":"image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src":"Imagenes/icons/icon2.png",
+            "type":"image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src":"Imagenes/icons/icon3.png",
+            "type":"image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src":"Imagenes/icons/icon4.png",
+            "type":"image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src":"Imagenes/icons/icon5.png",
+            "type":"image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src":"Imagenes/icons/icon6.png",
+            "type":"image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src":"Imagenes/icons/icon7.png",
+            "type":"image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src":"Imagenes/icons/icon8.png",
+            "type":"image/png",
+            "sizes": "512x512"
+        
+        }
+
+    ]
+    }
