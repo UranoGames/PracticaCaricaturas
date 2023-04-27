@@ -14,7 +14,28 @@ self.addEventListener('install', e => {
         'pages/Offline.html',
         'Imagenes/noimage.png',
         'manifest.json',
-        'js/app.js'    
+        'js/app.js',
+         '/Imagenes/Ada1.png',
+         '/Imagenes/Ada2.png',
+            '/Imagenes/Ada3.png',
+            '/Imagenes/Albert1.png',
+            '/Imagenes/Albert2.png',
+            '/Imagenes/Albert3.png',
+            '/Imagenes/Chris1.png',
+            '/Imagenes/Chris2.png',
+            '/Imagenes/Chris3.png',
+            '/Imagenes/Claire1.png',
+            '/Imagenes/Claire2.png',
+            '/Imagenes/Claire3.png',
+            '/Imagenes/Jill1.png',
+            '/Imagenes/Jill2.png',
+            '/Imagenes/404.png',
+            '/Imagenes/welcome.jpg',
+            '/Imagenes/fondo.jpg',
+            '/Imagenes/Jill3.png',
+            '/Imagenes/LeonKennedy1.png',
+            '/Imagenes/LeonKennedy2.png',
+            '/Imagenes/LeonKennedy3.png'
                    
         ]);
 
