@@ -7,7 +7,6 @@ self.addEventListener('install', e => {
     const cacheInstallEstatico = caches.open(cache_estatico).then(cache => {
 
         return cache.addAll([
-        '/',
         '/index.html'
                    
         ]);
