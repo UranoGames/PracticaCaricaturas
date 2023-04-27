@@ -113,7 +113,7 @@ self.addEventListener('install', e => {
         const falloUnaVez = ()=>{
          if(rechazada){ 
             if(/\.(png|jpg)$/i.test(e.request.url)){
-                resolve(caches.match('img/noimage.png'));
+                resolve(caches.match('Imagenes/noimage.png'));
             }
             else{
                 reject('No se encontro respuesta')
