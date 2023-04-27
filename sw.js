@@ -14,7 +14,7 @@ self.addEventListener('install', e => {
         'pages/Offline.html',
         'Imagenes/noimage.png',
         'manifest.json',
-        'js/app.js',    
+        'js/app.js'    
                    
         ]);
 
