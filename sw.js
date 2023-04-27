@@ -11,8 +11,8 @@ self.addEventListener('install', e => {
             '/index.html',
             '/personajes.html',
             '/css/style.css',
-            'pages/Nosotros.html',
-            'pages/Offline.html',
+            '/pages/Nosotros.html',
+            '/pages/Offline.html',
             '/Imagenes/noimage.png',
             '/manifest.json',
             '/js/app.js',    
@@ -35,7 +35,7 @@ self.addEventListener('install', e => {
             '/Imagenes/Jill3.png',
             '/Imagenes/LeonKennedy1.png',
             '/Imagenes/LeonKennedy2.png',
-            '/Imagenes/LeonKennedy3.png',
+            '/Imagenes/LeonKennedy3.png'
                    
         ]);
 
