@@ -28,6 +28,7 @@ self.addEventListener('install', e => {
             '/Imagenes/Claire1.png',
             '/Imagenes/Claire2.png',
             '/Imagenes/Claire3.png',
+            '/Imagenes/fondo.jpg',
             '/Imagenes/Jill1.png',
             '/Imagenes/Jill2.png',
             '/Imagenes/404.png',
@@ -43,7 +44,7 @@ self.addEventListener('install', e => {
     })
       const cacheInstallInmutable= caches.open(cache_inmutable).then(cache=>{
 
-       return cache.add('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+       return cache.add(['https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'])
       })
        e.waitUntil(Promise.all([cacheInstallEstatico,cacheInstallInmutable]));
     });
