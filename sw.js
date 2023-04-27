@@ -181,7 +181,7 @@ e.respondWith(respuesta);
 //             return newResp.clone();
 //         }).catch(err=>{
 //             if(e.request.headers.get('accept').includes('text/html')){
-//                 return caches.match('pages/Offline.html');
+//                 return caches.match('/pages/Offline.html');
 //             }
 //         })
 //     })
@@ -193,7 +193,7 @@ e.respondWith(respuesta);
 
 // .catch(err=>{
 //     if(e.request.headers.get('accept').includes('text/html')){
-//         return caches.match('pages/Offline.html');
+//         return caches.match('/pages/Offline.html');
 //     }
 // })
 
